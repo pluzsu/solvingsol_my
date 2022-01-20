@@ -1,0 +1,51 @@
+
+<!--
+Wall Drawing #65 (1971)
+Lines not short, not straight, crossing and touching, drawn at random, using four colors, uniformly dispersed with maximum density, covering the entire surface of the wall.
+
+-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>#65 - solvinsol</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+<script>
+function setup() {
+	createCanvas(500,500);
+	background(255);
+	noLoop();
+}
+
+function draw() {
+	for (i=0;i<70;i++){
+	  let r1 = random(490);
+	  let r2 = random(490);
+	  let a = random(6);
+	  let colours = [[0,102,0], [0,0,102], [204,0,0], [255,255,0]];
+	  let rc=random(colours);
+	  stroke(rc);
+	//text(rc, 10, 50);
+
+	  /*if (a==3) {	line(r1,0,500,r2);}
+	    else if (a==2) {	line(500,r1,r2,500);}
+	     else if (a==1) {line(0,r1,r2,500); }
+	  else {line(0,r1,r2,0); }*/
+		line(r1,0,500,r2);
+		line(500,r1,r2,500);
+		line(0,r1,r2,500);
+		line(r1,0,0,r2);
+		line(r1,0,r2,500);
+		line(0,r1,500,r2);
+	  }
+}
+
+</script>
+<body>
+<h1>Solving sol - #65</h1>
+<div>The solution of the Sol Lewitt instruction. <p>Wall Drawing #65 (1971)
+Lines not short, not straight, crossing and touching, drawn at random, using four colors, uniformly dispersed with maximum density, covering the entire surface of the wall.</p></div>
+<canvas id="wall"></canvas>
+
+</body>
+</html>
